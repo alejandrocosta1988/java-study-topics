@@ -3,6 +3,6 @@ Repository created to add interesting topics for those who are learning the Java
 
 ## Structure
 
-# Model
-Model is a package created to store generic classes to be used in code demonstrations of different topics. By now, defined classes are:
-- Employee.
+### `model` package
+`model` is a package created to store generic classes to be used in code demonstrations of different topics. By now, defined classes are:
+- `Employee`.
