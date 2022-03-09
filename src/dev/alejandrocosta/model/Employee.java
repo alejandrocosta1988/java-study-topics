@@ -5,10 +5,11 @@ import java.util.Objects;
 
 /**
  * Defines a generic class for employees. This class will be used in demonstrations of different topics using the Java language.
+ * The class Employee implements the interface Comparable to allow comparisons between Employee instances.
  * @author alejandro_costa
- * @version 0.1 2022-03-07
+ * @version 0.2 2022-03-09
  */
-public class Employee 
+public class Employee implements Comparable
 {
 	private String name;
 	private double salary;
@@ -82,6 +83,18 @@ public class Employee
 	@Override
 	public String toString() {
 		return "Employee [name = " + name + ", salary = " + salary + ", hireDay = " + hireDay + "]";
+	}
+
+	/**
+	 * Implementation of method declared in the Comparable interface. It uses the salary of the Employee to compare instances of Employee.
+	 * @return a positive Integer if the instance calling the method has a higher salary than the other Employee; a negative Integer if the instance calling the method has a lower salary than the other Employee; a zero if both salaries are equals.
+	 * @since 0.2 2022-03-09
+	 */
+	@Override
+	public int compareTo(Object otherObject) 
+	{
+		Employee other = (Employee) otherObject;
+		return Double.compare(this.salary, other.salary);
 	}	
 	
 }

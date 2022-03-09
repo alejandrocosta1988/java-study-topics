@@ -51,3 +51,14 @@ All the enumerated types defined are classes! You may define an enum by a simple
 Nevertheless, it will be a class. In this example, the class has three instances and no other instance can be created. Since it won't be possible to create more instances, you shouldn't compare enums with .equals(). You can use the `==` operator in comparisons.
 
 If you wish, you can define a constructor for the class, which should be a private constructor, and which will be invoked only when the instances be created. You can also define methods and fields associated with the enumerated class. In my demonstration, the class `Size` has a field called abbreviation, and methods associated with the class.
+
+### Interfaces
+
+You can describe what a class should do through an interface. For that, you won't need to implement the methods in the interface, just to declare their signature. In that way, an interface is NOT a class. It is a set of requirements for classes that need to conform to the interface. All methods are public, and there is no need of declaring it as public.
+
+There is NO instance fields in interfaces.
+To make a class implement an interface, we should:
+1. Declare that our class will implement the interface;
+2. Define all methods of the interface in the class.
+
+In our demonstration, we make `Employee` implement the interface `Comparable`, which declares a single method: `int compareTo(Object other)`. It will return a negative integer if the Object calling the method compareTo is smaller than the Object other, a positive integer if the opposite is true, or zero if both objects are equals. Check the code in `Employee` of package `model`.
