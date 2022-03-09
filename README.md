@@ -42,4 +42,12 @@ To adjust an initial capacity for the ArrayList, you can use the method .ensureC
 
 Now the `ArrayList` names has a capacity of holding at least 50 elements before having to reallocate its elements to a new bigger internal array.
 
-### `EnumDemonstations`
+### `Enum`
+
+All the enumerated types defined are classes! You may define an enum by a simple call to:
+
+`public enum MyEnum {OPTION_1, OPTION_2, OPTION_3}`
+
+Nevertheless, it will be a class. In this example, the class has three instances and no other instance can be created. Since it won't be possible to create more instances, you shouldn't compare enums with .equals(). You can use the `==` operator in comparisons.
+
+If you wish, you can define a constructor for the class, which should be a private constructor, and which will be invoked only when the instances be created. You can also define methods and fields associated with the enumerated class. In my demonstration, the class `Size` has a field called abbreviation, and methods associated with the class.
