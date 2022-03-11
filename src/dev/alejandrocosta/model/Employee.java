@@ -6,7 +6,7 @@ import java.util.Objects;
 /**
  * Defines a generic class for employees. This class will be used in demonstrations of different topics using the Java language.
  * The class Employee implements the interface Comparable to allow comparisons between Employee instances.
- * @author alejandro_costa
+ * @author Alejandro Costa
  * @version 0.2 2022-03-09
  */
 public class Employee implements Comparable<Employee>
