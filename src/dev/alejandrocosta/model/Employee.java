@@ -9,7 +9,7 @@ import java.util.Objects;
  * @author alejandro_costa
  * @version 0.2 2022-03-09
  */
-public class Employee implements Comparable
+public class Employee implements Comparable<Employee>
 {
 	private String name;
 	private double salary;
@@ -22,20 +22,11 @@ public class Employee implements Comparable
 		this.hireDay = LocalDate.of(year, month, day);
 	}
 
-	/**
-	 * Method to get the name of the employee.
-	 * @return a String with the name of the Employee.
-	 * @since 0.1
-	 */
+	
 	public String getName() {
 		return name;
 	}
 
-	/**
-	 * Method to get the salary of the employee.
-	 * @return a Double with the salary of the Employee.
-	 * @since 0.1
-	 */
 	public double getSalary() {
 		return salary;
 	}
@@ -87,14 +78,14 @@ public class Employee implements Comparable
 
 	/**
 	 * Implementation of method declared in the Comparable interface. It uses the salary of the Employee to compare instances of Employee.
+	 * @param otherEmployee An Employee instance to be compared with the instance calling the method compareTo().
 	 * @return a positive Integer if the instance calling the method has a higher salary than the other Employee; a negative Integer if the instance calling the method has a lower salary than the other Employee; a zero if both salaries are equals.
 	 * @since 0.2 2022-03-09
 	 */
 	@Override
-	public int compareTo(Object otherObject) 
+	public int compareTo(Employee otherEmployee) 
 	{
-		Employee other = (Employee) otherObject;
-		return Double.compare(this.salary, other.salary);
+		return Double.compare(this.salary, otherEmployee.salary);
 	}	
 	
 }
