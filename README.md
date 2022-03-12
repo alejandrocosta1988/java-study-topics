@@ -8,6 +8,7 @@ Repository created to add interesting topics for those who are learning the Java
 
 `model` is a package created to store generic classes to be used in code demonstrations of different topics. By now, defined classes are:
 - `Employee`;
+- `Manager` (which is a subclass of `Employee`);
 - `Size` (which is an Enum Class).
 
 ### `genericArrayList` package
@@ -25,7 +26,11 @@ In this package, I provide a demonstration of the use of enumeration classes. Me
 
 `Enum.valueOf()`, `.ordinal()`, `toString()`
 
-A comparison using the `==` operator is also demonstrated.
+### `InterfaceDemonstration` package
+
+In this package, I provide a demonstration of the use of interfaces in Java. The class `WithArraySorting` demonstrates the use of the method `Arrays.sort()` which is an interface that declares a single method: `.compareTo()`. In the demonstration, I created an array of Employee instances and sorted the employees inside the array by increasing order of their salary.
+
+To be able to use the `Arrays.sort()` method with `Employee` instances, it was necessary to implement the interface `Comparable` in the class `Employee`, and define the method `compareTo()` in the class. The method was defined using the salary of the employee to compare instances.
 
 ## Some comments on some topics ;)
 
