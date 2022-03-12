@@ -40,10 +40,9 @@ public class Manager extends Employee
 		return java.util.Objects.hash(super.hashCode(), bonus);
 	}
 
-	public boolean equals(Object otherObject) 
+	public boolean equals(Manager otherObject) 
 	{
-		if (!super.equals(otherObject)) return false;
-		var other = (Manager) otherObject;
+		if (!super.equals(otherObject)) return false;		
 		return this.bonus == otherObject.bonus;
 	}
 	
