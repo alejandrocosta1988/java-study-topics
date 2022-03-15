@@ -8,6 +8,7 @@ Repository created to add interesting topics for those who are learning the Java
 
 `model` is a package created to store generic classes to be used in code demonstrations of different topics. By now, defined classes are:
 - `Employee`;
+- `EmployeeLengthComparator`;
 - `Manager` (which is a subclass of `Employee`);
 - `Size` (which is an Enum Class).
 
@@ -31,6 +32,8 @@ In this package, I provide a demonstration of the use of enumeration classes. Me
 In this package, I provide a demonstration of the use of interfaces in Java. The class `WithArraySorting` demonstrates the use of the method `Arrays.sort()` which is an interface that declares a single method: `.compareTo()`. In the demonstration, I created an array of Employee instances and sorted the employees inside the array by increasing order of their salary.
 
 To be able to use the `Arrays.sort()` method with `Employee` instances, it was necessary to implement the interface `Comparable` in the class `Employee`, and define the method `compareTo()` in the class. The method was defined using the salary of the employee to compare instances.
+
+A second demonstration was made using the interface `Comparator`. If we want to sort an array of employees by the length of the name of the employees, for example, we would not be able to use the method `Arrays.sort()` because it would'n be possible to have to different implementations of `.compareTo()`. In this case, we can create a class that implements the interface `Comparator<Employee>`, and then define the method `compare()` as we wish. Then it will be possible to compare the employees using another signature of the method `Arrays.sort()`, which uses as a parameter a `comparator` object (an instance of a class that implements `Comparator`). See the demonstration in class `WithComparatorSorting`. The comparator used in the demonstration is defined as `EmployeeLengthComparator`, in the `model` package.
 
 ## Some comments on some topics ;)
 
