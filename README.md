@@ -89,3 +89,11 @@ The result would be the same.
 
 If the type of the parameters can be inferred by the compiler, we don't need to pass them:
 `Comparator<String> comparator = (first, second) -> first.length() - second.length();`
+
+### Method References
+
+If a lambda expression involves just a single method, it is possible to write it as a method reference. For example, if we have an array of strings and we want to sort it regardless of the letter case, we could write: `Arrays.sort(strings, String::compareToIgnoreCase());`
+
+The key point here is the operator `::`. It separates the method name from an object or class. The method can be an instance method or a static method.
+
+The body of the lambda expression must declare ONLY one method, and nothing more. Otherwise it won't be possible to convert it to a method reference.
