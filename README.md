@@ -37,7 +37,7 @@ A second demonstration was made using the interface `Comparator`. If we want to 
 
 ### `functionalDemonstrations` package
 
-I this package, I provide a demonstration of the use of lambda expressions. By now, there is just one class within this package, `LambdaDemonstration`. This class demonstrates the use of lambda expressions using a comparator of String.
+In this package, I demonstrate the use of lambda expressions and methods reference. There are two classes within this package, `LambdaDemonstration` and `MethodReferenceDemonstration`. In the first class, the use of lambda expressions is demonstrated using a comparator of String, and a comparator of Employee. The comparators were implemented by means of a lambda expression. In the second class, I demonstrate the use of method reference using an array of employees and the method `compareTo()`, since the `Employee` class implements the interface `Comparable`. In both cases, the arrays were properly sorted by means of Java functional programming.
 
 ## Some comments on some topics ;)
 
