@@ -74,3 +74,18 @@ To make a class implement an interface, we should:
 2. Define all methods of the interface in the class.
 
 In our demonstration, we make `Employee` implement the interface `Comparable`, which declares a single method: `int compareTo(Object other)`. It will return a negative integer if the Object calling the method compareTo is smaller than the Object other, a positive integer if the opposite is true, or zero if both objects are equals. Check the code in `Employee` of package `model`.
+
+### Lambda Expressions
+
+In resume, a lambda expression is a block of code in which there is a specification of any variables that must be used in the code itself. For example:
+`(String firstString, String secondString) -> firstString.length() - secondString.length();`
+
+If there is more than one expression in the code, we can also use {} to delimitate the expressions, just as in any other block of code. Then, we could also have written:
+  `(String first, String second) ->
+       {
+           first.length() - second.length();
+       }`
+The result would be the same.
+
+If the type of the parameters can be inferred by the compiler, we don't need to pass them:
+`Comparator<String> comparator = (first, second) -> first.length() - second.length();`
