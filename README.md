@@ -7,6 +7,7 @@ Repository created to add interesting topics for those who are learning the Java
 ### `model` package
 
 `model` is a package created to store generic classes to be used in code demonstrations of different topics. By now, defined classes are:
+- `Person`;
 - `Employee`;
 - `EmployeeLengthComparator`;
 - `Manager` (which is a subclass of `Employee`);
@@ -37,7 +38,9 @@ A second demonstration was made using the interface `Comparator`. If we want to 
 
 ### `functionalDemonstrations` package
 
-In this package, I demonstrate the use of lambda expressions and methods reference. There are two classes within this package, `LambdaDemonstration` and `MethodReferenceDemonstration`. In the first class, the use of lambda expressions is demonstrated using a comparator of String, and a comparator of Employee. The comparators were implemented by means of a lambda expression. In the second class, I demonstrate the use of method reference using an array of employees and the method `compareTo()`, since the `Employee` class implements the interface `Comparable`. In both cases, the arrays were properly sorted by means of Java functional programming.
+In this package, I demonstrate the use of lambda expressions and methods reference. There are two classes within this package, `LambdaDemonstration` and `MethodReferenceDemonstration`.
+
+In the `LambdaDemonstration` class, the use of lambda expressions is demonstrated using a comparator of String, and a comparator of Employee. The comparators were implemented by means of a lambda expression. In the `MethodReferenceDemonstration` class, I demonstrate the use of method reference using an array of employees and the method `compareTo()`, since the `Employee` class implements the interface `Comparable`. In both cases, the arrays were properly sorted by means of Java functional programming. A constructor reference is also demonstrated in `MethodReferenceDemonstration`. In this demonstration, I used the class `Person`, and mapped the reference to its constructor. It automatically selects the appropriate constructor and performs the call.
 
 ## Some comments on some topics ;)
 
@@ -97,3 +100,5 @@ If a lambda expression involves just a single method, it is possible to write it
 The key point here is the operator `::`. It separates the method name from an object or class. The method can be an instance method or a static method.
 
 The body of the lambda expression must declare ONLY one method, and nothing more. Otherwise it won't be possible to convert it to a method reference.
+
+It is also possible to invoke a constructor using a Constructor Reference. In this case, the method called by the reference will be a constructor of a class. If the class has more than one constructor, the appropriate constructor will be automatically selected by the compiler.
