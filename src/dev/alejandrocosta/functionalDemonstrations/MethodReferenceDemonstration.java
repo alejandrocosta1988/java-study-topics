@@ -1,8 +1,13 @@
 package dev.alejandrocosta.functionalDemonstrations;
 
+import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.List;
+import java.util.stream.Collectors;
+import java.util.stream.Stream;
 
 import dev.alejandrocosta.model.Employee;
+import dev.alejandrocosta.model.Person;
 
 /**
  * Demonstrates the use of Method Reference.
@@ -28,9 +33,14 @@ public class MethodReferenceDemonstration {
 		Arrays.sort(staff, Employee::compareTo);
 		//Arrays.sort(staff, (employee1, employee2) -> employee1.compareTo(employee2));
 		for (Employee employee : staff) System.out.println("Name: " + employee.getName() + ", Salary: " + employee.getSalary());
+		System.out.println();
 		
-		
-		
+		System.out.println("Demonstration of the use of Constructor Reference...");
+		System.out.println("Creating an array of names...");
+		ArrayList<String> names = new ArrayList(Arrays.asList("Maria", "João", "Filipa", "Gustavo"));
+		Stream<Person> stream = names.stream().map(Person::new); //Constructor reference
+		List<Person> people = stream.collect(Collectors.toList());
+		for (Person person : people) System.out.println(person.toString());
 		
 	}
 
