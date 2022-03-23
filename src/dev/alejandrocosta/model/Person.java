@@ -2,6 +2,11 @@ package dev.alejandrocosta.model;
 
 import java.util.Objects;
 
+/**
+ * Class Person holds only the name of a person. This class was created not to be a superclass. It was created just to be used in the demonstration of Constructor Reference.
+ * @author Alejandro Costa
+ * @version 0.1 2022-03-23
+ */
 public class Person {
 
 	private String name;
